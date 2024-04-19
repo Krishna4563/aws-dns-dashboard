@@ -12,7 +12,7 @@ const HOSTEDZONE_ID = process.env.HOSTED_ZONE_ID_01;
 
 app.use(
   cors({
-    origin: "*",
+    origin: "https://aws-dns-dashboard.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,

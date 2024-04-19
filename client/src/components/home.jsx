@@ -15,7 +15,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/records")
+      .get("https://dns-dashboard-server.vercel.app/api/records")
       .then((response) => {
         console.log("Received data:", response.data);
         setDomains(response.data);
@@ -32,7 +32,7 @@ const Dashboard = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/api/create", {
+      .post("https://dns-dashboard-server.vercel.app/api/create", {
         name,
         type,
         value,
@@ -49,7 +49,7 @@ const Dashboard = () => {
   const handleUpdate = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/api/update", {
+      .post("https://dns-dashboard-server.vercel.app/api/update", {
         selectedDomain: selectedDomain,
         newName: newName,
         newType: newType,
@@ -68,7 +68,7 @@ const Dashboard = () => {
   const handleDelete = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/api/delete", {
+      .post("https://dns-dashboard-server.vercel.app/api/delete", {
         selectedDomain: selectedDomain,
       })
       .then(() => {
