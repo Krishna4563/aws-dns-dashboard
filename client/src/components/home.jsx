@@ -5,12 +5,10 @@ const Dashboard = () => {
   const [domains, setDomains] = useState([]);
   const [selectedDomain, setSelectedDomain] = useState(null);
 
-  //to Create records
   const [name, setName] = useState("");
   const [type, setType] = useState("");
   const [value, setValue] = useState("");
 
-  //to update/delete records
   const [newName, setNewName] = useState("");
   const [newType, setNewType] = useState("");
   const [newValue, setNewValue] = useState("");
